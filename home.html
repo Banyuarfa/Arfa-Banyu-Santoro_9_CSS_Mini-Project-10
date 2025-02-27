@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 10</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      header {
+        height: 20vh;
+        text-align: center;
+        background-color: #ff8787;
+      }
+      img {
+        height: 15vh;
+      }
+      form {
+        text-align: left;
+      }
+      .container {
+        display: flex;
+      }
+      #sidebar {
+        background-color: #73c2fb;
+        height: 70vh;
+        width: 20%;
+        ul {
+          list-style-type: none;
+          display: none;
+          li {
+            padding: 0.5rem;
+            background-color: #1c7ed6;
+            margin: 0.5rem;
+            color: white;
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+        ::placeholder {
+          text-align: left;
+        }
+        &:hover {
+          h1 {
+            display: none;
+          }
+          ul {
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+      #content {
+        background-color: #ffd43b;
+
+        height: 70vh;
+        width: 80%;
+      }
+      footer {
+        background-color: #183153;
+        padding: 1rem;
+        text-align: center;
+        height: 10vh;
+      }
+      form {
+        display: none;
+        position: absolute;
+        left: 20%;
+      }
+      #project1 {
+        display: none;
+      }
+      #project1:checked ~ form {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Arfa Banyu Santoro</h1>
+      <img src="../assets/duck.jpeg" alt="" />
+    </header>
+    <div class="container">
+      <div id="sidebar">
+        <h1>sidebar</h1>
+        <ul>
+          <li>
+            <label for="project1"
+              >Project 1 <input type="checkbox" name="project1" id="project1" />
+              <form>
+                <label for="Nama">Nama</label
+                ><input
+                  type="text"
+                  placeholder="Nama belakang"
+                  name="Nama"
+                  id="Nama-depan"
+                /><input
+                  type="text"
+                  placeholder="Nama belakang"
+                  name="Nama"
+                  id="nama-belakang"
+                />
+                <br />
+                <label for="tel">No. Hp</label>
+                <input type="tel" name="tel" id="tel" placeholder="No. Hp" />
+                <br />
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email"
+                />
+                <br />
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" id="pria" />Pria
+                <input type="radio" name="gender" id="wanita" />Wanita
+                <br />
+                <label for="jenjang">Jenjang</label>
+                <select name="jenjang" id="jenjang">
+                  <option value="tk">TK</option>
+                  <option value="sd">SD</option>
+                  <option value="smp">SMP</option>
+                  <option value="sma/smk">SMA/SMK</option>
+                </select>
+                <br />
+                <label for="hobi">Hobi</label>
+                <input type="checkbox" name="hobi" id="membaca" />Membaca<input
+                  type="checkbox"
+                  name="hobi"
+                  id="menggambar"
+                />Menggambar<input
+                  type="checkbox"
+                  name="menulis"
+                  id="menulis"
+                />Menulis
+                <br />
+                <label for="alamat">Alamat</label>
+                <textarea
+                  name="alamat"
+                  id="alamat"
+                  cols="46"
+                  rows="10"
+                ></textarea>
+                <br />
+                <button type="submit">kirim</button>
+              </form></label
+            >
+          </li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </div>
+      <div id="content">
+        <h1>content</h1>
+      </div>
+    </div>
+
+    <footer><p>Made with 🦾 by banyu</p></footer>
+  </body>
+</html>
